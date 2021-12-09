@@ -1,0 +1,33 @@
+---
+title:
+call_to_action: Contact
+large_header: true
+show_in_navigation: false
+navigation_order: 0
+testimonials:
+  - message: So happy with my editable website, that represent my brand the right way.
+    testimonial_image: "https://imgproxy.generated.photos/8TchWAIJU5WneNKDeJFsMDSVIUutXM8W4qF52A6rcuw/rs:fit:512:512/wm:0.95:sowe:18:18:0.33/czM6Ly9pY29uczgu/Z3Bob3Rvcy1wcm9k/LnBob3Rvcy90cmFu/c3BhcmVudC8wMTI3/MjU1LnBuZw.png"
+    name: Lily
+    job: Personal trainer 
+  - message: When my code ends up looking like the hairball I vomit every week, I know I need help.
+    testimonial_image: "https://imgproxy.generated.photos/hu4Qh-VKZslbvfn_htDD9kqx9WOA91tZingP_R5jzg8/rs:fit:256:256/czM6Ly9pY29uczgu/Z3Bob3Rvcy1wcm9k/LnBob3Rvcy90cmFu/c3BhcmVudF92My92/M18wNDc5Mzc4LnBu/Zw.png"
+    name: 
+    Job: massage therapist
+  - message: When my pet human doesn't do what I want, I push things off the shelf to teach them a lesson.
+    testimonial_image: "https://imgproxy.generated.photos/_U6YSq5KvxIr59irsKA7g_Gx0fD7tPC9q9-pWCrbdJg/rs:fit:256:256/czM6Ly9pY29uczgu/Z3Bob3Rvcy1wcm9k/LnBob3Rvcy90cmFu/c3BhcmVudF92My92/M18wNzgwNTYxLnBu/Zw.png"
+    name: Maximilien
+    job: Photograh
+permalink: /
+---
+
+<div class="testimonials">
+	{% for testimonial in testimonials %}
+		<blockquote class="testimonial">
+    	<p class="testimonial-author"><img src="{{ testimonial.testimonial_image }}" alt="Photo of {{ testimonial.name }}"> {{ testimonial.name }}</p>
+			<div class="details>
+        <p class="testimonial-job">{{ testimonial.job }}
+        <p class="testimonial-message">{{ testimonial.message }}</p>
+      </div>
+		</blockquote>
+	{% endfor %}
+</div>
