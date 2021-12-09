@@ -5,6 +5,8 @@ const socialIcons = require('./social-icons.js');
 
 module.exports = function (eleventyConfig) {
 	eleventyConfig.setUseGitIgnore(false);
+	eleventyConfig.addWatchTarget('./css/tailwind.css');
+
 	eleventyConfig.setDataDeepMerge(true);
 
 	eleventyConfig.setFrontMatterParsingOptions({
